@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <style type="text/css">
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("https://p4.wallpaperbetter.com/wallpaper/330/785/205/equations-math-wallpaper-preview.jpg")
+    }
+    .area-calc{
+        display: flex;
+        height: 800px;
+        width: 600px;
+        border: solid 8px red;
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        background-color: #000;
+        
+    }
+
+    .visor{
+        width: 90%;
+        height: 100px ;
+        border: solid 3px red;
+        border-radius: 10px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+
+    .area-number{
+        width: 90%;
+        height: 600px;
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+
+    }
+
+    .sete,
+    .oito,
+    .nove,
+    .divid,
+    .quatro,
+    .cinco,
+    .seis,
+    .mult,
+    .um,
+    .dois,
+    .tres,
+    .zero,
+    .ponto,
+    .sub,
+    .soma,
+    .back,
+    .limpa,
+    .igual{
+        height: 90px;
+        width: 90px;
+        border: solid 3px red;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        background-color: black;
+
+    }
+
+    .igual{
+        width: 30%;
+        
+        
+    }
+
+    .limpa{
+        width: 30%;
+    }
+
+    .soma{
+        margin-left: 0px;
+        
+    }
+    .zero{
+        width: 35%;
+    }
+
+    .ponto{
+        margin-left: 35px;
+    }
+
+    .area-number div:hover{
+        background-color: white;
+        color: black;
+    }
+
+
+    @media (max-width: 1400px) {
+        .area-calc{
+            height: 700px;
+            width: 400px;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            display: flex;
+        }
+        .sete,
+        .oito,
+        .nove,
+        .divid,
+        .quatro,
+        .cinco,
+        .seis,
+        .mult,
+        .um,
+        .dois,
+        .tres,
+        .zero,
+        .ponto,
+        .sub,
+        .soma,
+        .back,
+        .limpa,
+        .igual{
+            height: 50px;
+            width: 50px;
+            border: solid 3px red;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            background-color: black;
+
+        }
+
+        .igual{
+            width: 30%;
+            
+            
+        }
+        
+        .limpa{
+            width: 30%;
+        }
+        
+        .soma{
+            margin-left: 0px;
+            
+        }
+        .zero{
+            width: 35%;
+        }
+        
+        .ponto{
+            margin-left: 15px;
+        }
+        
+        .area-number div:hover{
+            background-color: white;
+            color: black;
+        }
+        
+    }
+
+    @media (max-width: 440px) {
+
+        
+        .area-calc{
+                width: 300px;
+                height: 500px;
+                position: absolute;
+                top: 0; bottom: 0;
+                left: 0; right: 0;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: center;
+        }
+        
+        .area-number{
+                height: 500px;
+        }
+    
+
+        .area-number{
+            height: 300px;
+        }
+
+        .visor{
+            height: 50px;
+            font-size: 30px;
+        }
+        .sete,
+        .oito,
+        .nove,
+        .divid,
+        .quatro,
+        .cinco,
+        .seis,
+        .mult,
+        .um,
+        .dois,
+        .tres,
+        .zero,
+        .ponto,
+        .sub,
+        .soma,
+        .back,
+        .limpa,
+        .igual{
+            height: 30px;
+            width: 30px;
+            border: solid 3px red;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            background-color: black;
+
+        }
+
+        .igual{
+            width: 25%;
+            
+            
+        }
+        
+        .limpa{
+            width: 25%;
+        }
+        
+        .soma{
+            margin-left: 0px;
+            
+        }
+        .zero{
+            width: 35%;
+        }
+        
+        .ponto{
+            margin-left: 35px;
+        }
+
+    }
+
+    @media (min-width: 600px) and (max-width: 801px) {
+        .area-calc{
+            height: 700px;
+            width: 400px;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            display: flex;
+        }
+        .sete,
+        .oito,
+        .nove,
+        .divid,
+        .quatro,
+        .cinco,
+        .seis,
+        .mult,
+        .um,
+        .dois,
+        .tres,
+        .zero,
+        .ponto,
+        .sub,
+        .soma,
+        .back,
+        .limpa,
+        .igual{
+            height: 50px;
+            width: 50px;
+            border: solid 3px red;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            background-color: black;
+
+        }
+
+        .igual{
+            width: 30%;
+            
+            
+        }
+        
+        .limpa{
+            width: 30%;
+        }
+        
+        .soma{
+            margin-left: 0px;
+            
+        }
+        .zero{
+            width: 35%;
+        }
+        
+        .ponto{
+            margin-left: 15px;
+        }
+        
+        .area-number div:hover{
+            background-color: white;
+            color: black;
+        }
+        
+    }
+
+
+    @media (max-width: 360px) {
+        .area-calc{
+            height: 400px;
+            width: 300px;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            margin: auto;
+            display: flex;
+        }
+
+        .visor{
+            font-size: 30px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="area-calc">
+        <div class="visor"></div>
+        <div class="area-number">
+            <div class="sete"   onclick="inserir('7')">7</div>
+            <div class="oito"   onclick="inserir('8')">8</div>
+            <div class="nove"   onclick="inserir('9')">9</div>
+            <div class="divid"  onclick="inserir('/')">÷</div>
+            <div class="quatro" onclick="inserir('4')">4</div>
+            <div class="cinco"  onclick="inserir('5')">5</div>
+            <div class="seis"   onclick="inserir('6')">6</div>
+            <div class="mult"   onclick="inserir('*')">x</div>
+            <div class="um"     onclick="inserir('1')">1</div>
+            <div class="dois"   onclick="inserir('2')">2</div>
+            <div class="tres"   onclick="inserir('3')">3</div>
+            <div class="sub"    onclick="inserir('-')">-</div>
+            <div class="zero"   onclick="inserir('0')">0</div>
+            <div class="ponto"  onclick="inserir('.')">.</div>
+            <div class="soma"   onclick="inserir('+')">+</div>
+            <div class="back"   onclick="exclui()"><</div>
+            <div class="limpa"  onclick="limpa()">C</div>
+            <div class="igual"  onclick="calc()">=</div>
+
+        </div>
+    </div>
+ <script>
+     
+function inserir(num){
+    var numero =  document.querySelector(".visor").innerHTML;
+    document.querySelector(".visor").innerHTML = numero + num;
+}
+
+function limpa(){
+    document.querySelector(".visor").innerHTML = '';
+}
+
+function exclui(){
+    var result =  document.querySelector(".visor").innerHTML;
+    document.querySelector(".visor").innerHTML = result.substring(0, result.length - 1);
+}
+
+function calc(){
+    var resultado = document.querySelector(".visor").innerHTML;
+    if(resultado){
+        document.querySelector(".visor").innerHTML = eval(resultado);
+
+    }
+    else{
+        document.querySelector(".visor").innerHTML = "";
+    }
+}
+
+ </script>
+</body>
+</html>
